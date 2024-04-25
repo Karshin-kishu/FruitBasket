@@ -18,7 +18,7 @@ public class Client {
 	   Fruit[] f1 = new Fruit[10];
 	   Scanner sc = new Scanner(System.in);
 	   int a=0;
-	   int i=1;
+	   int i=0;
 	   String name;
 	   String colour;
 	   double weight;
@@ -34,6 +34,9 @@ public class Client {
 		  System.out.println("5. to Display name");
 		  System.out.println("6. to Display all");
 		  System.out.println("7. Invoke fruit specific functionality");
+		  System.out.println("8. COUNT: ");
+		  System.out.println("9. Check order type");
+		  System.out.println("10. SET FRESHNESS");
 		  a=sc.nextInt();
 	   switch (a) {
 	case 1:{
@@ -111,11 +114,37 @@ public class Client {
 	case 8:{
 		int o;
 		o=i;
-		System.out.println("Total no. of Fruits in basket" + o--);
+		o--;
+		System.out.println("Total no. of Fruits in basket" + o);
 		break;
 	}
+	case 9:{
+		System.out.println("Invoke fruit specific functionality");
+		int q;
+		q=sc.nextInt();
+		if(f1[q].taste().equals("sour"))
+		{
+			System.out.println("fruit is sour in taste");
+			f1[q].setFresh(false);
+			System.out.println("updated");
+		}
+			
+		break;
+		
+	}
+	case 10:{
+		System.out.println("updated");
+		int q;
+		q=sc.nextInt();
+		f1[q].setFresh(false);
+		if(!f1[q].isFresh()){
+			System.out.println("shi jaa rhaa");
+		};
+		break;
+		
+	}
 	default:
-		System.out.println("shi saii daal");
+		System.out.println("wrong choice");
 		break;
 	}
 	
