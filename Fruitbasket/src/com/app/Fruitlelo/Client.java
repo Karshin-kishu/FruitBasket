@@ -112,10 +112,8 @@ public class Client {
 		break;
 	}
 	case 8:{
-		int o;
-		o=i;
-		o--;
-		System.out.println("Total no. of Fruits in basket" + o);
+		
+		System.out.println("Total no. of Fruits in basket" + i);
 		break;
 	}
 	case 9:{
